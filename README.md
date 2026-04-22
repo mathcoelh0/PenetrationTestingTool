@@ -2,7 +2,7 @@
 
 Uma ferramenta de auditoria de segurança e teste de penetração desenvolvida em Python. Esta ferramenta ajuda profissionais de segurança e administradores de sistemas a realizar avaliações de segurança básicas em sistemas e redes.
 
-## 🛡️ Funcionalidades
+## O que esse projeto faz
 
 - **Varredura de Portas**
   - Verifica portas abertas (1-100)
@@ -15,13 +15,13 @@ Uma ferramenta de auditoria de segurança e teste de penetração desenvolvida e
   - Análise de cifras utilizadas
   - Verificação de data de expiração de certificados
 
-## 🔧 Requisitos
+## Você tem que ter pra usar 
 
 - Python 3.8 ou superior
 - Sistema Operacional: Windows, Linux ou macOS
 - Conexão com internet (para análises remotas)
 
-## 📦 Instalação
+##  Instalação
 
 1. Clone o repositório:
 ```bash
@@ -29,7 +29,7 @@ git clone https://github.com/mathcoelh0/PenetrationTestingTool.git
 cd PenetrationTestingTool
 ```
 
-2. (Opcional) Crie e ative um ambiente virtual:
+2. (Opcional, faz se quiser você não é obrigado a nada) Crie e ative um ambiente virtual:
 ```bash
 python -m venv venv
 source venv/bin/activate  # Linux/macOS
