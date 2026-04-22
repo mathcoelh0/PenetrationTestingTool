@@ -36,7 +36,7 @@ source venv/bin/activate  # Linux/macOS
 venv\Scripts\activate     # Windows
 ```
 
-## 🚀 Uso
+## Uso
 
 Para iniciar uma varredura básica:
 ```bash
@@ -48,7 +48,7 @@ Exemplo:
 python fas.py exemplo.com.br
 ```
 
-## 🔍 Exemplos de Saída
+##  Exemplos de Saída
 
 ```
 [*] Iniciando auditoria de segurança em exemplo.com.br
@@ -66,18 +66,18 @@ python fas.py exemplo.com.br
 [+] Certificado expira em: 2025-06-02
 ```
 
-## ⚠️ Aviso Legal
+##  Aviso para os marginais 
 
-Esta ferramenta deve ser usada apenas para testes de segurança autorizados. O usuário é responsável por cumprir todas as leis e regulamentos aplicáveis. O uso indevido desta ferramenta pode constituir crime.
+Esta ferramenta deve ser usada apenas para testes de segurança autorizados. Você é responsável por cumprir todas as leis e regulamentos. O uso indevido desta ferramenta pode constituir crime, ou seja, pode ser processado na justiça, pagar multas e por aí vai...
 
-## 🤝 Contribuindo
+## Contribuindo
 
-Contribuições são bem-vindas! Sinta-se à vontade para:
+Você pode ajudar no projeto:
 
 1. Reportar bugs
 2. Sugerir novas funcionalidades
 3. Enviar pull requests
 
-## 📝 Licença
+##  Licença
 
 Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
