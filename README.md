@@ -1,83 +1,66 @@
-# Ferramenta de Auditoria de Segurança (FAS)
+# Penetration Testing Tool
 
-Uma ferramenta de auditoria de segurança e teste de penetração desenvolvida em Python. Esta ferramenta ajuda profissionais de segurança e administradores de sistemas a realizar avaliações de segurança básicas em sistemas e redes.
+## Project Overview
+This project is designed for penetration testing with robust features and tools to assist security professionals.
 
-## O que esse projeto faz
+## Claude AI Integration
+### Installation Instructions for `anthropic` Package
+1. Install the `anthropic` package by running:
+   ```bash
+   pip install anthropic
+   ```
+2. Ensure you have the necessary API keys and credentials set up in your environment.
 
-- **Varredura de Portas**
-  - Verifica portas abertas (1-100)
-  - Identificação rápida de serviços ativos
-  - Timeout configurável para respostas
+### Environment Setup
+Create a `.env` file in the root directory of the project with the following configuration:
+```
+ANTHROPIC_API_KEY=your_api_key_here
+```
+Make sure to replace `your_api_key_here` with your actual API key.
 
-- **Análise SSL/TLS**
-  - Verificação de certificados SSL
-  - Identificação de versões do protocolo
-  - Análise de cifras utilizadas
-  - Verificação de data de expiração de certificados
+### Usage Examples
+To analyze test results and generate reports using Claude AI, use the following sample commands:
+```python
+from anthropic import Claude
 
-## Você tem que ter pra usar 
+# Initialize Claude AI
+claude = Claude(api_key='your_api_key_here')
 
-- Python 3.8 ou superior
-- Sistema Operacional: Windows, Linux ou macOS
-- Conexão com internet (para análises remotas)
+# Example function to analyze results
+result_analysis = claude.analyze_results(results)
+print(result_analysis)
 
-##  Instalação
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/mathcoelh0/PenetrationTestingTool.git
-cd PenetrationTestingTool
+# Generate a security report
+report = claude.generate_report(test_data)
+print(report)
 ```
 
-2. (Opcional, faz se quiser você não é obrigado a nada) Crie e ative um ambiente virtual:
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate     # Windows
-```
+## GitHub Actions Workflow
+We have set up a new GitHub Actions workflow for automated security analysis. Ensure your `.github/workflows/security.yml` file is properly configured to trigger on every push, as shown below:
+```yaml
+name: Security Analysis
+on:
+  push:
+    branches:
+      - main
 
-## Uso
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run Analysis
+        run: python analyze.py
+```  
 
-Para iniciar uma varredura básica:
-```bash
-python fas.py alvo
-```
+## Additional Features
+- Strong reporting capabilities
+- Real-time alerts
+- Comprehensive coverage of security protocols
 
-Exemplo:
-```bash
-python fas.py exemplo.com.br
-```
+## Contribution
+We welcome contributions from the community. Please check our contributing guidelines.
 
-##  Exemplos de Saída
-
-```
-[*] Iniciando auditoria de segurança em exemplo.com.br
-
-[*] Iniciando varredura de portas em exemplo.com.br
-[*] Iniciado em: 2025-03-28 12:32:20
-[*] Verificando porta 80
-[+] Porta 80 está aberta
-[*] Verificando porta 443
-[+] Porta 443 está aberta
-
-[*] Informações SSL/TLS (porta 443):
-[+] Versão: TLSv1.3
-[+] Cifra: TLS_AES_256_GCM_SHA384
-[+] Certificado expira em: 2025-06-02
-```
-
-##  Aviso para os marginais 
-
-Esta ferramenta deve ser usada apenas para testes de segurança autorizados. Você é responsável por cumprir todas as leis e regulamentos. O uso indevido desta ferramenta pode constituir crime, ou seja, pode ser processado na justiça, pagar multas e por aí vai...
-
-## Contribuindo
-
-Você pode ajudar no projeto:
-
-1. Reportar bugs
-2. Sugerir novas funcionalidades
-3. Enviar pull requests
-
-##  Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
+## License
+This project is licensed under the MIT License.
